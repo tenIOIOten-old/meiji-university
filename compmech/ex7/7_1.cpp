@@ -72,7 +72,8 @@ int main()
     if (min>x[i]) min = x[i];
   }
 
-  
+
+
   double dx = (max-min)/count;
   arg = min;
   for (int i = 0; i <= count; i++) {
