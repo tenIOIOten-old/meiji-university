@@ -1,7 +1,7 @@
 //
 //  7_2.cpp
 //
-//  ‚R”N‚U‘g‚R‚Q”Ô@”’’¹“V‘¾
+//  ï¿½Rï¿½Nï¿½Uï¿½gï¿½Rï¿½Qï¿½Ô@ï¿½ï¿½ï¿½ï¿½ï¿½Vï¿½ï¿½
 //
 #include "stdio.h"
 #include "stdlib.h"
