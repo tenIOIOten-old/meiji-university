@@ -71,6 +71,7 @@ int main()
     if (max<x[i]) max = x[i];
     if (min>x[i]) min = x[i];
   }
+
   
   double dx = (max-min)/count;
   arg = min;
@@ -80,6 +81,5 @@ int main()
 
   fclose (ifp);
   fclose (ofp);
-
   return 0;
 }

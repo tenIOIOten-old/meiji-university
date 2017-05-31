@@ -19,6 +19,7 @@ double function(double x)
 
 double newton(int num,double arg,double x[N], double y[N])
 {
+  
   double w[N];
   double a[N];
   double answer = 0.0;
@@ -101,6 +102,6 @@ int main()
   }
 
   fclose (fp);
-  
+
   return 0;
 }
