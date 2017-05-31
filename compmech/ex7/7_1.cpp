@@ -16,9 +16,9 @@ double lagrange(int num,double arg,double x[N], double y[N])
   for(int i = 0; i < num; i++)
   {
     tmp = 1.0;
-    for (int j = 0; j < num ; j++)
+    for (int j = 0; j < num; j++)
     {
-      if (i != j)tmp *= ( arg - x[j] ) / ( x[i] - x[j] );
+      if (i != j) tmp *= ( arg - x[j] ) / ( x[i] - x[j] );
     }
     answer += tmp * y[i];
   }
@@ -33,7 +33,7 @@ double newton(int num,double arg,double x[N], double y[N]){
   for (int i = 0; i < num; ++i)
   {
     w[i] = y[i];
-    for (int j = i-1; j >= 0 ; --j)
+    for (int j = i-1; j >= 0; --j)
     {
       w[j] = (w[j+1] - w[j])/(x[i] - x[j]);
     }
@@ -51,7 +51,7 @@ double newton(int num,double arg,double x[N], double y[N]){
 int main()
 {
   const int count = 50;
-  int    num = 0;
+  int num = 0;
   double arg = 0.0;
   double max = 0.0;
   double min = 0.0;
@@ -66,15 +66,15 @@ int main()
     printf("%s\n","Error!" );
     return 1;
   }
-  while(fscanf(ifp,"%lf %lf\n", &x[num],&y[num]) != EOF)num++;
+  while(fscanf(ifp,"%lf %lf\n", &x[num],&y[num]) != EOF) num++;
   for (int i = 0; i < num; i++) {
-    if (max<x[i])max = x[i];
-    if (min>x[i])min = x[i];
+    if (max<x[i]) max = x[i];
+    if (min>x[i]) min = x[i];
   }
 
   double dx = (max-min)/count;
   arg = min;
-  for (int  i = 0; i <= count; i++) {
+  for (int i = 0; i <= count; i++) {
     fprintf(ofp, "%f,%f,%f\n",arg+i*dx,lagrange(num,arg+dx*i,x,y),newton(num,arg+dx*i,x,y));
   }
   fclose (ifp);
