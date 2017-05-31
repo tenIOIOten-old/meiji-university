@@ -77,8 +77,9 @@ int main()
         for (int i = 0; i <= count; i++) {
                 fprintf(ofp, "%f,%f,%f\n",arg+i*dx,lagrange(num,arg+dx*i,x,y),newton(num,arg+dx*i,x,y));
         }
-        
+
         fclose (ifp);
         fclose (ofp);
+
         return 0;
 }
