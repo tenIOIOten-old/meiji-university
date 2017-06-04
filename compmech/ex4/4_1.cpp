@@ -1,8 +1,8 @@
 //
-// 4_1.cpp 
+// 4_1.cpp
 //
-// ?3”N6‘g32”Ô”’’¹“V‘¾
-// ?XV—š—ğ
+// ?3ï¿½N6ï¿½g32ï¿½Ô”ï¿½ï¿½ï¿½ï¿½Vï¿½ï¿½
+// ?ï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½
 // 2017.04.24 ... ver 1.0 ?
 
 
@@ -24,7 +24,7 @@ double func(double x)
 
 void  show_func(fp* func, const double a, const double b, const int n,double res[])
 {
-	double x = (b-a)/n; 
+	double x = (b-a)/n;
 	int k = 0;
 
 	for(int i = 0; i<=n; i++)
@@ -58,7 +58,7 @@ int solve_bisection(fp* func, fp* dfunc, double &ans, double b)
 	}
 	return -1;
 }
-void main()
+int main()
 {
 	double ans = 0.0;
 	double a = -2.0;
@@ -79,4 +79,5 @@ void main()
 			printf("error: the root_x cannot be found.\n");
 		}
 	}
+	return 0;
 }

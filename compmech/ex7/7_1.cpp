@@ -3,8 +3,8 @@
 //
 //  �R�N�U�g�R�Q�ԁ@�����V��
 //
-#include "stdio.h"
-#include "stdlib.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 #define N 256
 

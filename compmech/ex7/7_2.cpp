@@ -6,9 +6,9 @@
 //
 //
 
-#include "stdio.h"
-#include "stdlib.h"
-#include "math.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
 #define N 256
 
@@ -50,7 +50,7 @@ int main()
   const int num = 20;
   const double step = 0.01;
   double max = 1.0;
-  double min = -1.0;
+  double min =-1.0;
   double maxdiff = 0.0;
   double mindiff = 1e10;
   int maxn=0;
@@ -101,7 +101,8 @@ int main()
     fprintf(fp,"%f,%f,%f\n", min+i*step, newton( minn, min+i*step,x,y),newton( maxn, min+i*step, maxx, maxy));
   }
 
-  fclose (fp);
+  fclose (fp)
 
   return 0;
 }
+
