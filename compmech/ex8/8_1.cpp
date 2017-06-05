@@ -136,7 +136,7 @@ double func(Matrix A, int M, double x)
 
 int main(int argc, char const *argv[])
 {
-  const int M = 4;
+  const int M = 3+1;
   double x[N];
   double y[N];
   Matrix A;

@@ -14,18 +14,6 @@ double ipow(double p, int n)
     s *= p;
   return s;
 }
-void print_matrix(Matrix a, int M)
-{
-  for (int i = 0; i < M; i++)
-  {
-    for (int j = 0; j < M; j++)
-    {
-      printf("%10.3f", a[i][j]);
-    }
-    printf("|%10.3f\n", a[i][M]);
-  }
-  printf("\n");
-}
 
 void change_row(Matrix origin, const int a, int M)
 {
@@ -40,8 +28,7 @@ void change_row(Matrix origin, const int a, int M)
       change = k;
     }
   }
-  printf("Max value: %7.3f\n", fabs(max_value));
-  printf("Max row: %d\n", change);
+
   if (change == a)
     return;
   for (int i = 0; i < M + 1; ++i)
@@ -50,7 +37,6 @@ void change_row(Matrix origin, const int a, int M)
     origin[a][i] = origin[change][i];
     origin[change][i] = array;
   }
-  printf("Row %d changed with row %d \n\n", a, change);
 }
 
 void forward_elimination(Matrix a, int M)
@@ -79,7 +65,6 @@ void forward_elimination(Matrix a, int M)
         }
       }
     }
-    print_matrix(a, M);
   }
 }
 
@@ -95,7 +80,7 @@ void backward_substitution(Matrix a, int M)
       a[i][M] -= a[i][j] * a[j][M];
       a[i][j] -= a[i][j];
     }
-    print_matrix(a, M);
+    
   }
 }
 
@@ -153,16 +138,15 @@ void neary(Matrix A,int M, double x[N], double y[N], int num){
   for (int i = 0; i < M; i++)
     A[i][M] = findT(x, y, i, num);
 
-  print_matrix(A, M);
   gauss_elimination(A, M);
  
 }
 
 int main(int argc, char const *argv[])
 {
-  const int M1 = 4;
-  const int M2 = 6;
-  const int M3 = 8;
+  const int M1 = 3+1;
+  const int M2 = 5+1;
+  const int M3 = 7+1;
   double x[N];
   double y[N];
   Matrix A1;
@@ -194,6 +178,10 @@ int main(int argc, char const *argv[])
       fprintf(ofp,"%lf,%lf,%lf,%lf\n", dx, func(A1,M1,dx), func(A2,M2,dx), func(A3,M3,dx));
       dx += step;
     }
+    printf("dimention m = 3\ny(x)= %fx + %fx^2 + %fx^3\n", A1[0][M1], A1[1][M1], A1[2][M1]);
+    printf("dimention m = 5\n,y(x)= %fx + %fx^2 + %fx^3 + %fx^4 + %fx^5\n", A2[0][M2], A2[1][M2], A2[2][M2], A2[3][M2], A2[4][M2]);
+    printf("dimention m = 7\n,y(x)= %fx + %fx^2 + %fx^3 + %fx^4 + %fx^5 + %fx^6 + %fx^7\n", A3[0][M3], A3[1][M3], A3[2][M3], A3[3][M3], A3[4][M3], A3[5][M3], A3[6][M3]);
+    
     fclose (ofp);
   }
   return 0;
