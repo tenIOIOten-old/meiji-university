@@ -1,3 +1,10 @@
+//
+//ex08/8_1.cpp
+//
+//‚R”N‚U‘g‚R‚Q”Ô”’’¹“V‘¾
+//
+//2017.06.05
+//
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -7,7 +14,7 @@
 typedef double Matrix[N][N + 1];
 
 double ipow(double p, int n)
-//ãƒ™ã‚­ä¹—
+//ƒxƒLæ
 {
   double s = 1;
   for (int k = 0; k < n; k++)
