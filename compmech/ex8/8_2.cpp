@@ -1,7 +1,7 @@
 //
 //ex08/8_2.cpp
 //
-//‚R”N‚U‘g‚R‚Q”Ô”’’¹“V‘¾
+//ï¿½Rï¿½Nï¿½Uï¿½gï¿½Rï¿½Qï¿½Ô”ï¿½ï¿½ï¿½ï¿½Vï¿½ï¿½
 //
 //2017.06.05
 //
@@ -14,7 +14,7 @@
 typedef double Matrix[N][N + 1];
 
 double ipow(double p, int n)
-//ƒxƒLæ
+//ï¿½xï¿½Lï¿½ï¿½
 {
   double s = 1;
   for (int k = 0; k < n; k++)
@@ -161,7 +161,7 @@ int main(int argc, char const *argv[])
   Matrix A3;
   int num = 0;
   FILE *ifp;
-  ifp = fopen("data.csv", "rt");
+  ifp = fopen("./data.csv", "rt");
   if (ifp != NULL)
   {
     while (fscanf(ifp, "%lf,%lf", &x[num], &y[num]) != EOF)
@@ -172,7 +172,7 @@ int main(int argc, char const *argv[])
   neary(A2,M2,x,y,num);
   neary(A3,M3,x,y,num);
   FILE *ofp;
-  ofp = fopen("output_2.csv","wt");
+  ofp = fopen("./output_2.csv","wt");
   if (ofp!=NULL)
   {
     double max = 2.0;
