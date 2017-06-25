@@ -161,7 +161,7 @@ int main(int argc, char const *argv[])
   Matrix A3;
   int num = 0;
   FILE *ifp;
-  ifp = fopen("./data.csv", "rt");
+  ifp = fopen("./exp.csv", "rt");
   if (ifp != NULL)
   {
     while (fscanf(ifp, "%lf,%lf", &x[num], &y[num]) != EOF)

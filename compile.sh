@@ -1,5 +1,5 @@
-directori=ex8
-file=8_2.cpp
+directori=ex9
+file=9_2.cpp
 cd `dirname $0`
 cd compmech/$directori
 gcc $file
