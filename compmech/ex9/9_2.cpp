@@ -46,7 +46,7 @@ double f2(double x,double velocity, ModelInfo model)
 }
 // accelerationに関する微分方程式
 double f3(double x,double velocity, double acceleration, ModelInfo model){
-    return ( -model.k_const*velocity - model.mass*model.gravity + x/fabs(x)*model.damping_const*acceleration)/model.mass;	
+    return ( -model.k_const*velocity + x/fabs(x)*model.damping_const*acceleration)/model.mass;	
 }
 
 // 状態量の表示
