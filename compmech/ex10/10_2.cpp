@@ -1,7 +1,7 @@
 //
 //	10_2.cpp
 //
-//	作成者：3年6組32番 椎葉 太一
+//	作成者：3年6組32番 白鳥　天太
 //	更新履歴：
 //	2017.07.03 ... ver 1.0 完成
 //
@@ -72,7 +72,7 @@ int main(int argc, char const *argv[])
     step = (maxV - minV) / (size-1);
     for (int i = 0; i < size; i++)
     {
-        fprintf(ofp, "%f,%d\n", minV + step * i, bin2dec(data[i]));
+        fprintf(ofp, "%f\n", (float)bin2dec(data[i])*5.0/0x0fff);
     }
     return 0;
 }
