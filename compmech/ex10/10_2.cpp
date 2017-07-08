@@ -11,7 +11,7 @@
 #define N 10000
 #define BitSize 12
 
-int bin2dec(long x)
+int bin2dec(long long x)
 {
     //整数型のヒ?ットサイス?を算出
     int base = 1;
@@ -47,7 +47,7 @@ int bin2dec(long x)
 
 int main(int argc, char const *argv[])
 {
-    long data[N];
+    long long data[N];
     float maxV = 5;
     float minV = -5;
     float step = 0.0;
@@ -65,7 +65,7 @@ int main(int argc, char const *argv[])
         return 1;
     }
 
-    while (fscanf(ifp, "%ld\n", &data[size]) != EOF)
+    while (fscanf(ifp, "%lld\n", &data[size]) != EOF)
     {
         size++;
     }
